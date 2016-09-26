@@ -7,8 +7,8 @@ CREATE DATABASE clinica; USE clinica;
 --TABELA ESPECIALIDADE
 CREATE TABLE `especialidade`(
     
-    `id_esp` TINYINT(3) NOT NULL AUTO_INCREMENT,
-    `designacao` VARCHAR(40) NOT NULL,
+    `id_esp`        TINYINT(3) NOT NULL AUTO_INCREMENT,
+    `designacao`    VARCHAR(40) NOT NULL,
     PRIMARY KEY(`id_esp`)
 
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
@@ -17,11 +17,11 @@ CREATE TABLE `especialidade`(
 --TABELA PACIENTES
 CREATE TABLE `pacientes` (
     
-    `id_paciente` TINYINT(3) NOT NULL AUTO_INCREMENT,
+    `id_paciente`   TINYINT(3) NOT NULL AUTO_INCREMENT,
     `nome_paciente` VARCHAR(60) NOT NULL, 
-    `morada` VARCHAR(100),
-    `contacto` TINYINT(9),
-    `cod_postal` VARCHAR(8),
+    `morada`        VARCHAR(100),
+    `contacto`      TINYINT(9),
+    `cod_postal`    VARCHAR(8),
 
     PRIMARY KEY(`id_paciente`)
 
@@ -39,7 +39,6 @@ CREATE TABLE `medicos`(
     `id_esp`        TINYINT(3),
 
     PRIMARY KEY(`id_medico`),
-    FOREIGN KEY(`id_esp`) REFERENCES 
-
+    FOREIGN KEY(`id_esp`) REFERENCES `especialidades`(id_esp)
 
 ) 
