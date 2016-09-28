@@ -27,7 +27,7 @@ CREATE TABLE `pacientes` (
 
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
-
+--TABELA MEDICOS
 CREATE TABLE `medicos`(
 
     `id_medico`     TINYINT(3) NOT NULL AUTO_INCREMENT,
