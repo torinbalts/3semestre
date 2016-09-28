@@ -27,9 +27,15 @@ CREATE TABLE `pacientes` (
 
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
+<<<<<<< HEAD
 --TABELA MEDICOS
 CREATE TABLE `medicos`(
 
+=======
+-- TABELA MEDICOS
+CREATE TABLE `medicos`
+(
+>>>>>>> 852b466ff97050dee6d67c06dcb101e75476d799
     `id_medico`     TINYINT(3) NOT NULL AUTO_INCREMENT,
     `nome_medico`   VARCHAR(60) NOT NULL,
     `morada`        VARCHAR(100),
@@ -40,5 +46,4 @@ CREATE TABLE `medicos`(
 
     PRIMARY KEY(`id_medico`),
     FOREIGN KEY(`id_esp`) REFERENCES `especialidades`(id_esp)
-
-) 
+) ENGINE = INNODB DEFAULT CHARSET = latin1;
