@@ -1,9 +1,3 @@
--- nome ficheiro = clinica.sql
--- autor Telmo Silva
--- data 29/9/2016
-
-
--- TABELA ESPECIALIDADES
 CREATE TABLE `especialidades`
 (
     `id_esp` TINYINT(3) NOT NULL AUTO_INCREMENT,
@@ -12,7 +6,6 @@ CREATE TABLE `especialidades`
     PRIMARY KEY (`id_esp`)
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
--- TABELA MEDICOS
 CREATE TABLE `medicos`
 (
     `id_medico` TINYINT(3) NOT NULL AUTO_INCREMENT,
@@ -23,7 +16,6 @@ CREATE TABLE `medicos`
     FOREIGN KEY(`id_esp`) REFERENCES especialidades(`id_esp`)
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
--- TABELA PACIENTES
 CREATE TABLE `pacientes`
 (
     `id_paciente` TINYINT(3) NOT NULL AUTO_INCREMENT,
@@ -33,7 +25,6 @@ CREATE TABLE `pacientes`
 
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
--- TABELA CONSULTAS
 CREATE TABLE `consultas`
 (
     `id_consulta` TINYINT(3) NOT NULL AUTO_INCREMENT,
@@ -51,7 +42,6 @@ CREATE TABLE `consultas`
 
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
 
--- TABELA EXAMES
 CREATE TABLE `exames_comp`
 (
     `id_exame` TINYINT(3) NOT NULL AUTO_INCREMENT,
@@ -59,3 +49,7 @@ CREATE TABLE `exames_comp`
 
     PRIMARY KEY (`id_exame`)
 ) ENGINE = INNODB DEFAULT CHARSET = latin1;
+
+-- INSERT INTO especialidades VALUES (2, "Cardiologia"),(3, "Ortopedia"),(4, "Neurologia"),(5, "Cirurgia");
+
+-- UPDATE especialidades SET designacao="Medicina Interna" WHERE id_esp=5;
